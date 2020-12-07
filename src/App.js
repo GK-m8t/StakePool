@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Account from './components/Account';
 //import Wager from './components/Wager';
 import Error from './components/Error';
+import Stats from './components/stats';
 
 class App extends Component {
   render() {
@@ -14,6 +15,8 @@ class App extends Component {
             <Switch>
              <Route path="/" component={Home} exact/>
              <Route path="/account" component={Account}/>
+             <Route path="/stats" component={Stats}/>
+
              <Route component={Error}/>
            </Switch>
         </div>

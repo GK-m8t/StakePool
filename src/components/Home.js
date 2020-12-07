@@ -476,6 +476,21 @@ export default class setseller extends React.Component {
                   GitHub
                 </NavLink>
               </NavItem>
+
+              <NavItem>
+                <NavLink
+                  href="/stats"
+                  style={{
+                    "font-size": "1.1111111111vmax",
+                    "font-family": "OpenSans-SemiBold, sans-serif",
+                    color: "#FFFFFF",
+                    "margin-top": "1.736vmax",
+                  }}
+                >
+                  Stats
+                </NavLink>
+              </NavItem>
+
               <NavItem>
                 <NavLink
                   style={{
@@ -558,7 +573,7 @@ export default class setseller extends React.Component {
                     <DropdownItem divider />
                     <DropdownItem style={{ "line-height": "0.6667vmax" }}>
                       <NavLink
-                        href="/account"
+                        href="/stats"
                         style={{
                           "font-size": "1.1111111111vmax",
                           "font-family": "OpenSans-SemiBold, sans-serif",

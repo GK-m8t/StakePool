@@ -299,7 +299,7 @@ export default class setseller extends React.Component {
 
               <NavItem>
                 <NavLink
-                  href="/stats"
+                  href=""
                   style={{
                     "font-size": "1.1111111111vmax",
                     "font-family": "OpenSans-SemiBold, sans-serif",
@@ -367,28 +367,7 @@ export default class setseller extends React.Component {
                   >
                     <DropdownItem header>Stakepool</DropdownItem>
                     <DropdownItem style={{ "line-height": "0.6667vmax" }}>
-                      <NavLink
-                        href="/"
-                        style={{
-                          "font-size": "1.1111111111vmax",
-                          "font-family": "OpenSans-SemiBold, sans-serif",
-                          color: "#5A7184",
-                        }}
-                      >
-                        Mainnet
-                      </NavLink>
-                    </DropdownItem>
-                    <DropdownItem style={{ "line-height": "0.6667vmax" }}>
-                      <NavLink
-                        href="/"
-                        style={{
-                          "font-size": "1.1111111111vmax",
-                          "font-family": "OpenSans-SemiBold, sans-serif",
-                          color: "#5A7184",
-                        }}
-                      >
-                        Delphinet
-                      </NavLink>
+
                     </DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem style={{ "line-height": "0.6667vmax" }}>
@@ -422,9 +401,9 @@ export default class setseller extends React.Component {
             }}
           >
             <strong>
-              Your
+              Previous Cycle
               <br />
-              Staking Orders
+              Stats
             </strong>
           </p>
           <Card
@@ -436,77 +415,66 @@ export default class setseller extends React.Component {
               "min-height": "22vmax",
             }}
           >
-            <Nav tabs>
-              <NavItem style={{ width: "16vmax" }}>
-                <NavLink
-                  className={classnames({
-                    active: this.state.activeTab === "mainnet",
-                  })}
-                  onClick={() => {
-                    this.setTab("mainnet");
-                  }}
-                  style={{
-                    color:
-                      this.state.activeTab === "mainnet"
-                        ? "#183B56"
-                        : "#5A7184",
-                    "font-family": "OpenSans-SemiBold, sans-serif",
-                    "text-align": "left",
-                    "font-size": "1.7vmax",
-                  }}
-                >
-                  Mainnet
-                </NavLink>
-              </NavItem>
-              <NavItem style={{ width: "16vmax" }}>
-                <NavLink
-                  className={classnames({
-                    active: this.state.activeTab === "delphinet",
-                  })}
-                  onClick={() => {
-                    this.setTab("delphinet");
-                  }}
-                  style={{
-                    color:
-                      this.state.activeTab === "delphinet"
-                        ? "#183B56"
-                        : "#5A7184",
-                    "font-family": "OpenSans-SemiBold, sans-serif",
-                    "text-align": "left",
-                    "font-size": "1.7vmax",
-                  }}
-                >
-                  Delphinet
-                </NavLink>
-              </NavItem>
-            </Nav>
-            <Col
-              style={{
-                "text-align": "right",
-                "padding-right": "3.4vmax",
-                "padding-top": this.state.show ? "1.666666667vmax" : "5vmax",
-                "padding-bottom": this.state.show ? "1.66667vmax" : "5vmax",
-              }}
-            >
-              <button
-                onClick={() => {
-                  this.stakingDet();
-                }}
+
+            <Row>    
+                <Col
                 style={{
-                  "font-family": "OpenSans-Bold, sans-serif",
-                  color: "#1565D8",
-                  backgroundColor: "#FFFFFF",
-                  "text-align": "center",
-                  "font-size": "1.277778vmax",
-                  border: "0.06944vmax solid #1565D8",
-                  "border-radius": "0.556vmax",
-                  width: "14.7222222vmax",
-                  height: "3.333333vmax",
+                    "text-align": "left",
+                    "padding-left": "5.4vmax",
+                    "padding-top": this.state.show ? "1.666666667vmax" : "5vmax",
+                    "padding-bottom": this.state.show ? "1.66667vmax" : "5vmax",
                 }}
-              >
-                <strong>Connect Wallet</strong>
-              </button>
-            </Col>
+                >
+                    <button
+                    disabled
+                    style={{
+                        color: "#1565D8",
+                        backgroundColor: "#F2F5F8",
+                        "font-family": "OpenSans-Bold, sans-serif",
+                        "text-align": "center",
+                        "font-size": "2.4305555556vmax",
+                        border: "0.06944vmax solid #1565D8",
+                        "border-radius": "0.5555556vmax",
+                        width: "24.5138888888889vmax",
+                        height: "5.55555556vmax",
+                        "line-height": "5.55555556vmax",
+                    }}
+                    >
+                    Staked Amount
+                    </button>
+
+                </Col>
+
+                <Col
+                style={{
+                    "text-align": "right",
+                    "padding-right": "5.4vmax",
+                    "padding-top": this.state.show ? "1.666666667vmax" : "5vmax",
+                    "padding-bottom": this.state.show ? "1.66667vmax" : "5vmax",
+                }}
+                >
+                    <button
+                    disabled
+                    style={{
+                        color: "#1565D8",
+                        backgroundColor: "#F2F5F8",
+                        "font-family": "OpenSans-Bold, sans-serif",
+                        "text-align": "center",
+                        "font-size": "2.4305555556vmax",
+                        border: "0.06944vmax solid #1565D8",
+                        "border-radius": "0.5555556vmax",
+                        width: "24.5138888888889vmax",
+                        height: "5.55555556vmax",
+                        "line-height": "5.55555556vmax",
+                    }}
+                    >
+                    ROI
+                    </button>
+
+                </Col>
+            </Row>
+
+
             <Collapse isOpen={this.state.show}>
               <Row
                 sm="2"
