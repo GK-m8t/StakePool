@@ -19,7 +19,7 @@ import {
   DropdownItem,
 } from "reactstrap";
 import classnames from "classnames";
-import stakepool from "./icons/stakepool.png";
+import stakepool from "./icons/stakepool.svg";
 import bg from "./icons/background.png";
 import setting from "./icons/setting.png";
 import heart from "./icons/Heart.png";

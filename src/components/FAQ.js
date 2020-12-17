@@ -19,7 +19,7 @@ import {
   DropdownItem,
 } from "reactstrap";
 import classnames from "classnames";
-import stakepool from "./icons/stakepool.png";
+import stakepool from "./icons/stakepool.svg";
 import bg from "./icons/background.png";
 import setting from "./icons/setting.png";
 import heart from "./icons/Heart.png";
@@ -338,9 +338,13 @@ export default class setseller extends React.Component {
             "font-family": "OpenSans-SemiBold, sans-serif",
             color: "black",
             "padding-left": 40,
+            "padding-right": 20,
             }}
         >
-        Stakepool lets you predict the Tezos price range for the duration of the staking cycle period and if by the end of the staking period (5 and 7 cycles for delphinet and mainnet respectively).
+        Stakepool lets you predict the Tezos price range for the duration of the staking cycle period and if by the end of the staking period (5 and 7 cycles for delphinet and mainnet respectively), 
+        Tezos price falls in the range predicted by you, all the baking rewards accrued in the contract are distributed among the users who predicted the right price range. 
+        That means helping you earn greater rewards than you usually get. Even if you predict wrong, you dont't get the staking rewards and don't need to even pay any fees to 
+        utilize the platform since we only charge a platform usage fee if you win any rewards.
         </p>
 
         <h2
@@ -351,6 +355,7 @@ export default class setseller extends React.Component {
             color: "#90EE90",
             "margin-top": "2.736vmax",
             "padding-left": 40,
+            "padding-right": 20,
             }}
         >
         <strong>How do I get Started?</strong>
@@ -364,9 +369,70 @@ export default class setseller extends React.Component {
             "font-family": "OpenSans-SemiBold, sans-serif",
             color: "black",
             "padding-left": 40,
+            "padding-right": 20,
             }}
         >
-        Stakepool lets you predict the Tezos price range for the duration of the staking cycle period and if by the end of the staking period (5 and 7 cycles for delphinet and mainnet respectively).
+        Connect your Thanos wallet with stakepool and utilize your instincts to stake on a range 
+        which you think XTZ will reach in the designated cycle.
+        </p>
+
+        <h2
+        style=
+            {{
+            // "font-size": "4.1111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "#90EE90",
+            "margin-top": "2.736vmax",
+            "padding-left": 40,
+            "padding-right": 20,
+            }}
+        >
+        <strong>How is Stakepool different from other betting platforms?</strong>
+        </h2>
+        <br/>
+
+        <p
+        style=
+            {{
+            "font-size": "1.6111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "black",
+            "padding-left": 40,
+            "padding-right": 20,
+            }}
+        >
+        In other betting platform you loose your bet amount if your prediction turns out be wrong, here in Stakepool you get your bet amount back.
+        <br/>
+        If you win then you get rewards just like any other betting platform.
+        </p>
+
+        <h2
+        style=
+            {{
+            // "font-size": "4.1111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "#90EE90",
+            "margin-top": "2.736vmax",
+            "padding-left": 40,
+            "padding-right": 20,            
+            }}
+        >
+        <strong>Is my money safe?</strong>
+        </h2>
+        <br/>
+
+        <p
+        style=
+            {{
+            "font-size": "1.6111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "black",
+            "padding-left": 40,
+            "padding-right": 20,
+            }}
+        >
+        Absolutely !  All the payouts are managed by our smart contract and there is no way to redirect them. 
+        You can go through our smart contract to know how we disburse payment effectively.
         </p>
 
         <h2
@@ -379,10 +445,9 @@ export default class setseller extends React.Component {
             "padding-left": 40,
             }}
         >
-        <strong>How much do I get profit?</strong>
+        <strong>How much profit  can I expect from Stakepool?</strong>
         </h2>
         <br/>
-
         <p
         style=
             {{
@@ -390,9 +455,11 @@ export default class setseller extends React.Component {
             "font-family": "OpenSans-SemiBold, sans-serif",
             color: "black",
             "padding-left": 40,
+            "padding-right": 20,
             }}
         >
-        Stakepool lets you predict the Tezos price range for the duration of the staking cycle period and if by the end of the staking period (5 and 7 cycles for delphinet and mainnet respectively).
+        Well, there is no fixed ROI, your rewards are directly proportional to the amount staked on a particular cycle, 
+        so if you want to earn more rewards then invite your friends on stakepool.
         </p>
 
         <h2
@@ -403,12 +470,12 @@ export default class setseller extends React.Component {
             color: "#90EE90",
             "margin-top": "2.736vmax",
             "padding-left": 40,
+            "padding-right": 20,
             }}
         >
-        <strong>How can I contact the team?</strong>
+        <strong>From where can I learn more about Stakepool?</strong>
         </h2>
         <br/>
-
         <p
         style=
             {{
@@ -418,7 +485,8 @@ export default class setseller extends React.Component {
             "padding-left": 40,
             }}
         >
-        Stakepool lets you predict the Tezos price range for the duration of the staking cycle period and if by the end of the staking period (5 and 7 cycles for delphinet and mainnet respectively).
+        You can go through our code base on <a href="https://github.com/Tezsure/Stakepool" target="_blank" rel="noopener noreferrer">Github</a>, 
+        you can also read our documentation at <a href="https://www.notion.so/Stakepool-A-no-loss-price-prediction-experiment-38bc2c0e0fe540aaaa1bc91ebcdcf5c4" target="_blank" rel="noopener noreferrer">Notion</a>.
         </p>
 
         </Card>

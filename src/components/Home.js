@@ -28,7 +28,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
-import stakepool from "./icons/stakepool.png";
+import stakepool from "./icons/stakepool.svg";
 import bg from "./icons/background.png";
 import setting from "./icons/setting.png";
 import tz from "./icons/tz.png";
@@ -42,7 +42,7 @@ import linkedin from "./icons/linkedin.png";
 import twitter from "./icons/twitter.png";
 import up from "./icons/up.jpeg";
 import down from "./icons/down.jpeg";
-import det from "./icons/details.png";
+import det from "./icons/details.svg";
 import axios from "axios";
 import Countdown from "react-countdown-now";
 import swal from "@sweetalert/with-react";
