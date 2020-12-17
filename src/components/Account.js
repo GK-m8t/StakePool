@@ -351,6 +351,20 @@ export default class setseller extends React.Component {
 
               <NavItem>
                 <NavLink
+                  href="/FAQ"
+                  style={{
+                    "font-size": "1.1111111111vmax",
+                    "font-family": "OpenSans-SemiBold, sans-serif",
+                    color: "#FFFFFF",
+                    "margin-top": "1.736vmax",
+                  }}
+                >
+                  FAQ
+                </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink
                   style={{
                     "font-size": "1.1111111111vmax",
                     "font-family": "OpenSans-SemiBold, sans-serif",
