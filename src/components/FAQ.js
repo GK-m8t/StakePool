@@ -322,7 +322,7 @@ export default class setseller extends React.Component {
             {{
             // "font-size": "4.1111111111vmax",
             "font-family": "OpenSans-SemiBold, sans-serif",
-            color: "#90EE90",
+            color: "black",
             "margin-top": "2.736vmax",
             "padding-left": 40,
             }}
@@ -352,7 +352,7 @@ export default class setseller extends React.Component {
             {{
             // "font-size": "4.1111111111vmax",
             "font-family": "OpenSans-SemiBold, sans-serif",
-            color: "#90EE90",
+            color: "black",
             "margin-top": "2.736vmax",
             "padding-left": 40,
             "padding-right": 20,
@@ -381,7 +381,7 @@ export default class setseller extends React.Component {
             {{
             // "font-size": "4.1111111111vmax",
             "font-family": "OpenSans-SemiBold, sans-serif",
-            color: "#90EE90",
+            color: "black",
             "margin-top": "2.736vmax",
             "padding-left": 40,
             "padding-right": 20,
@@ -411,7 +411,7 @@ export default class setseller extends React.Component {
             {{
             // "font-size": "4.1111111111vmax",
             "font-family": "OpenSans-SemiBold, sans-serif",
-            color: "#90EE90",
+            color: "black",
             "margin-top": "2.736vmax",
             "padding-left": 40,
             "padding-right": 20,            
@@ -440,7 +440,7 @@ export default class setseller extends React.Component {
             {{
             // "font-size": "4.1111111111vmax",
             "font-family": "OpenSans-SemiBold, sans-serif",
-            color: "#90EE90",
+            color: "black",
             "margin-top": "2.736vmax",
             "padding-left": 40,
             }}
@@ -467,7 +467,7 @@ export default class setseller extends React.Component {
             {{
             // "font-size": "4.1111111111vmax",
             "font-family": "OpenSans-SemiBold, sans-serif",
-            color: "#90EE90",
+            color: "black",
             "margin-top": "2.736vmax",
             "padding-left": 40,
             "padding-right": 20,
