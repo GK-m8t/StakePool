@@ -303,7 +303,7 @@ export default class setseller extends React.Component {
             }}
           >
             <strong>
-              Coming Soon...
+            Frequently Asked Questions
             </strong>
           </p>
 
