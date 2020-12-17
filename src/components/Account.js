@@ -271,6 +271,7 @@ export default class setseller extends React.Component {
               <NavItem>
                 <NavLink
                   href="https://www.notion.so/Stakepool-A-no-loss-price-prediction-experiment-38bc2c0e0fe540aaaa1bc91ebcdcf5c4"
+                  target="_blank" rel="noopener noreferrer"
                   style={{
                     "font-size": "1.1111111111vmax",
                     "font-family": "OpenSans-SemiBold, sans-serif",
@@ -283,7 +284,8 @@ export default class setseller extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://gitlab.com/tezsure/staking-market-george/-/tree/StakePool"
+                  href="https://github.com/Tezsure/Stakepool-Contracts"
+                  target="_blank" rel="noopener noreferrer"
                   style={{
                     "font-size": "1.1111111111vmax",
                     "font-family": "OpenSans-SemiBold, sans-serif",
@@ -321,8 +323,7 @@ export default class setseller extends React.Component {
                   >
                     <DropdownItem style={{ "line-height": "0.6667vmax" }}>
                       <NavLink
-                      disabled
-                        href="/statsmainnet"
+                        href="/mainnet"
                         style={{
                           "font-size": "1.1111111111vmax",
                           "font-family": "OpenSans-SemiBold, sans-serif",
@@ -405,8 +406,7 @@ export default class setseller extends React.Component {
                     <DropdownItem header>Stakepool</DropdownItem>
                     <DropdownItem style={{ "line-height": "0.6667vmax" }}>
                       <NavLink
-                      disabled
-                        href="/"
+                        href="/mainnet"
                         style={{
                           "font-size": "1.1111111111vmax",
                           "font-family": "OpenSans-SemiBold, sans-serif",
@@ -490,7 +490,7 @@ export default class setseller extends React.Component {
                         ? "#183B56"
                         : "#5A7184",
                     "font-family": "OpenSans-SemiBold, sans-serif",
-                    "text-align": "left",
+                    "text-align": "Center",
                     "font-size": "1.7vmax",
                   }}
                 >
@@ -511,7 +511,7 @@ export default class setseller extends React.Component {
                         ? "#183B56"
                         : "#5A7184",
                     "font-family": "OpenSans-SemiBold, sans-serif",
-                    "text-align": "left",
+                    "text-align": "Center",
                     "font-size": "1.7vmax",
                   }}
                 >

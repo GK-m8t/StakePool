@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import StatsMainnet from './components/stats_mainnet';
+import Mainnet from './components/mainnet';
 import StatsDelphinet from './components/stats_delphinet';
 import Home from './components/Home';
 import Account from './components/Account';
@@ -15,7 +15,7 @@ class App extends Component {
             <Switch>
              <Route path="/" component={Home} exact/>
              <Route path="/account" component={Account}/>
-             <Route path="/statsmainnet" component={StatsMainnet}/>
+             <Route path="/mainnet" component={Mainnet}/>
              <Route path="/statsdelphinet" component={StatsDelphinet}/>
              <Route component={Error}/>
            </Switch>
