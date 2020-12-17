@@ -307,7 +307,123 @@ export default class setseller extends React.Component {
             </strong>
           </p>
 
+          <Card
+            inverse={true}
+            style={{
+              "margin-left": "9.0888888889vmax",
+              "margin-right": "7.6vmax",
+              "box-shadow": "0px 0.6944444vmax 2.430555556vmax #00000008",
+              "min-height": "22vmax",
+            }}
+          >
+
+        <h2
+        style=
+            {{
+            // "font-size": "4.1111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "#90EE90",
+            "margin-top": "2.736vmax",
+            "padding-left": 40,
+            }}
+        >
+        <strong>What is Stakepool?</strong>
+        </h2>
+        <br/>
+
+        <p
+        style=
+            {{
+            "font-size": "1.6111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "black",
+            "padding-left": 40,
+            }}
+        >
+        Stakepool lets you predict the Tezos price range for the duration of the staking cycle period and if by the end of the staking period (5 and 7 cycles for delphinet and mainnet respectively).
+        </p>
+
+        <h2
+        style=
+            {{
+            // "font-size": "4.1111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "#90EE90",
+            "margin-top": "2.736vmax",
+            "padding-left": 40,
+            }}
+        >
+        <strong>How do I get Started?</strong>
+        </h2>
+        <br/>
+
+        <p
+        style=
+            {{
+            "font-size": "1.6111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "black",
+            "padding-left": 40,
+            }}
+        >
+        Stakepool lets you predict the Tezos price range for the duration of the staking cycle period and if by the end of the staking period (5 and 7 cycles for delphinet and mainnet respectively).
+        </p>
+
+        <h2
+        style=
+            {{
+            // "font-size": "4.1111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "#90EE90",
+            "margin-top": "2.736vmax",
+            "padding-left": 40,
+            }}
+        >
+        <strong>How much do I get profit?</strong>
+        </h2>
+        <br/>
+
+        <p
+        style=
+            {{
+            "font-size": "1.6111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "black",
+            "padding-left": 40,
+            }}
+        >
+        Stakepool lets you predict the Tezos price range for the duration of the staking cycle period and if by the end of the staking period (5 and 7 cycles for delphinet and mainnet respectively).
+        </p>
+
+        <h2
+        style=
+            {{
+            // "font-size": "4.1111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "#90EE90",
+            "margin-top": "2.736vmax",
+            "padding-left": 40,
+            }}
+        >
+        <strong>How can I contact the team?</strong>
+        </h2>
+        <br/>
+
+        <p
+        style=
+            {{
+            "font-size": "1.6111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "black",
+            "padding-left": 40,
+            }}
+        >
+        Stakepool lets you predict the Tezos price range for the duration of the staking cycle period and if by the end of the staking period (5 and 7 cycles for delphinet and mainnet respectively).
+        </p>
+
+        </Card>
         </Container>
+
         <Container
           fluid="xs"
           id="contact"
