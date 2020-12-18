@@ -30,16 +30,14 @@ import {
 } from "reactstrap";
 import stakepool from "./icons/stakepool.svg";
 import bg from "./icons/background.png";
-import setting from "./icons/setting.png";
-import tz from "./icons/tz.png";
-import heart from "./icons/Heart.png";
+import setting from "./icons/setting.svg";
+import tz from "./icons/tz.svg";
+import heart from "./icons/Heart.svg";
 import tezsure from "./icons/tezsure.png";
-import youtube from "./icons/youtube.png";
-import instagram from "./icons/instagram.png";
-import google from "./icons/google.png";
-import telegram from "./icons/telegram.png";
-import linkedin from "./icons/linkedin.png";
-import twitter from "./icons/twitter.png";
+import youtube from "./icons/youtube.svg";
+import telegram from "./icons/telegram.svg";
+import linkedin from "./icons/linkedin.svg";
+import twitter from "./icons/twitter.svg";
 import up from "./icons/up.jpeg";
 import down from "./icons/down.jpeg";
 import det from "./icons/details.svg";
@@ -1471,30 +1469,10 @@ export default class setseller extends React.Component {
           >
             <strong>Copyright © 2020. Crafted with love.</strong>
           </p>
-          <img
-            src={google}
-            style={{
-              width: "1.125em",
-              height: "1.125em",
-              "margin-left": "1.25em",
-            }}
-          />
-          <img
-            src={youtube}
-            style={{
-              width: "1.25vmax",
-              height: "1.25vmax",
-              "margin-left": "1.3888888889vmax",
-            }}
-          />
-          <img
-            src={telegram}
-            style={{
-              width: "1.25vmax",
-              height: "1.25vmax",
-              "margin-left": "1.3888888889vmax",
-            }}
-          />
+          <a
+          href="https://tezsure.com"
+          target="_blank" rel="noopener noreferrer"
+          >
           <img
             src={tezsure}
             style={{
@@ -1503,6 +1481,11 @@ export default class setseller extends React.Component {
               "margin-left": "1.3888888889vmax",
             }}
           />
+          </a>
+          <a
+          href="https://twitter.com/tezsure"
+          target="_blank" rel="noopener noreferrer"
+          >
           <img
             src={twitter}
             style={{
@@ -1511,6 +1494,11 @@ export default class setseller extends React.Component {
               "margin-left": "1.3888888889vmax",
             }}
           />
+          </a>
+          <a
+          href="https://www.linkedin.com/company/tezsure/"
+          target="_blank" rel="noopener noreferrer"
+          >
           <img
             src={linkedin}
             style={{
@@ -1519,14 +1507,33 @@ export default class setseller extends React.Component {
               "margin-left": "1.3888888889vmax",
             }}
           />
+          </a>
+          <a
+          href="https://www.youtube.com/channel/UCZg7LT1bFWeFiKwGBLcLfLQ"
+          target="_blank" rel="noopener noreferrer"
+          >
           <img
-            src={instagram}
+            src={youtube}
             style={{
               width: "1.25vmax",
               height: "1.25vmax",
               "margin-left": "1.3888888889vmax",
             }}
           />
+          </a>
+          <a
+          href="https://web.telegram.org/#/im?p=@Indiatezos"
+          target="_blank" rel="noopener noreferrer"
+          >
+          <img
+            src={telegram}
+            style={{
+              width: "1.25vmax",
+              height: "1.25vmax",
+              "margin-left": "1.3888888889vmax",
+            }}
+          />
+          </a>
         </Container>
       </Container>
     );
