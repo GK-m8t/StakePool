@@ -109,7 +109,7 @@ export default class setseller extends React.Component {
           );
         var ending = Number(x.path[4]) + 5 + 1;
         if (ending <= Number(storagedata.data.value.withdrawcycle)) {
-          wPrice = "$"(
+          wPrice = (
             Number(storagedata.data.value.cycleDet[ending.toString()].cPrice) /
               100
           ).toString();
