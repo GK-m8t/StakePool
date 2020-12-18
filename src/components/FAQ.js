@@ -335,10 +335,7 @@ export default class setseller extends React.Component {
             "padding-right": 20,
             }}
         >
-        Stakepool lets you predict the Tezos price range for the duration of the staking cycle period and if by the end of the staking period (5 and 7 cycles for delphinet and mainnet respectively), 
-        Tezos price falls in the range predicted by you, all the baking rewards accrued in the contract are distributed among the users who predicted the right price range. 
-        That means helping you earn greater rewards than you usually get. Even if you predict wrong, you dont't get the staking rewards and don't need to even pay any fees to 
-        utilize the platform since we only charge a platform usage fee if you win any rewards.
+        Stakepool is a price prediction platform which helps you earn more than delegating your tokens to your baker.
         </p>
 
         <h2
@@ -398,6 +395,65 @@ export default class setseller extends React.Component {
         In other betting platform you loose your bet amount if your prediction turns out be wrong, here in Stakepool you get your bet amount back.
         <br/>
         If you win then you get rewards just like any other betting platform.
+        </p>
+
+        <h2
+        style=
+            {{
+            // "font-size": "4.1111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "black",
+            "margin-top": "2.736vmax",
+            "padding-left": 40,
+            "padding-right": 20,
+            }}
+        >
+        <strong>How it works?</strong>
+        </h2>
+        <br/>
+
+        <p
+        style=
+            {{
+            "font-size": "1.6111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "black",
+            "padding-left": 40,
+            "padding-right": 20,
+            }}
+        >
+        When you bet on Stakepool your bet amount gets locked for 6 cycles and is delegated to a baker. 
+        The baker then sends us the rewards after 6 cycles which is distributed among winners after deduction of platform usage fee. 
+        All the participants get their staked amount back.
+        </p>
+
+        <h2
+        style=
+            {{
+            // "font-size": "4.1111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "black",
+            "margin-top": "2.736vmax",
+            "padding-left": 40,
+            "padding-right": 20,
+            }}
+        >
+        <strong>How to use stakepool?</strong>
+        </h2>
+        <br/>
+
+        <p
+        style=
+            {{
+            "font-size": "1.6111111111vmax",
+            "font-family": "OpenSans-SemiBold, sans-serif",
+            color: "black",
+            "padding-left": 40,
+            "padding-right": 20,
+            }}
+        >
+        You can connect your Thanos wallet with our Dapp and start betting on the ranges you think 
+        where the XTZ amount will lay after particular cycles.
         </p>
 
         <h2
