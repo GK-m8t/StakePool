@@ -633,11 +633,11 @@ export default class setseller extends React.Component {
                             " - $" +
                             value[2].toString()}
                       </td>
-                      <td>{number(value[3])?"$"+value[3]:value[3]}</td>
+                      <td>{Number(value[3])?"$"+value[3]:value[3]}</td>
                       <td>{value[4] / 1000000} XTZ</td>
                       <td>{value[7]}%</td>
-                      <td>{number(value[3])?value[5]?(value[5]/1000000).toString()+" XTZ":"Stake Refunded":"TBA"}</td>
-                      <td>{number(value[3])?"Completed":"Ongoing"}</td>
+                      <td>{Number(value[3])?value[5]?(value[5]/1000000).toString()+" XTZ":"Stake Refunded":"TBA"}</td>
+                      <td>{Number(value[3])?"Completed":"Ongoing"}</td>
                     </tr>
                   ))}
                 </tbody>
