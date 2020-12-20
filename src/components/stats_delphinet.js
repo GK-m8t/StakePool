@@ -99,7 +99,7 @@ export default class setseller extends React.Component {
               Rannounce:true,
               Tamt:Number(storagedata.data.value.cycleDet[withdrawcycle.toString()].cAmount)/1000000,
               pool:Number(storagedata.data.value.interestPool)/1000000,
-              winning:[lrange,urange,wprice,reward,cAmt]
+              winning:[lrange,urange,wprice,reward,cAmt,lrange.includes("-")]
             };
           });
 
@@ -376,7 +376,7 @@ export default class setseller extends React.Component {
             <strong>
               Previous Staking Period
               <br />
-              Cycle {this.state.currentCycle} Stats
+              Cycle {this.state.currentCycle+1} - {this.state.currentCycle+6} Stats
             </strong>
           </p>
           <Card
@@ -400,7 +400,7 @@ export default class setseller extends React.Component {
                 }}
                 >
                     <button
-                    disabled  
+                    disabled
                     style={{
                       color: "white",
                         backgroundColor: "#4868c2",
@@ -413,14 +413,22 @@ export default class setseller extends React.Component {
                         height: "7.05555556vmax",
                         "line-height": "2.55555556vmax",
 
-                    }}
+                    }}this.state.winning[2]
                     >
-                      Winning Price{" "}<br/>
-                      {this.state.announce?this.state.Rannounce?"$"+this.state.winning[2]:"TBA":"TBA"}
+                      Winning Price Range{" "}<br/>
+                      {this.state.announce?this.state.Rannounce?this.state.winning[0] == this.state.winning[1]
+                        ? this.state.winning[5]
+                          ? "Below $" + this.state.winning[0].toString()
+                          : "Above $" + this.state.winning[0].toString()
+                        : "Between $" +
+                          this.state.winning[0].toString() +
+                          " - $" +
+                          this.state.winning[1].toString()
+                      :"TBA":"TBA"}
                     </button>
 
                 </Col>
-                
+
                 <Col
                 style={{
                     "text-align": "left",
