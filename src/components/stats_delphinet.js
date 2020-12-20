@@ -77,16 +77,19 @@ export default class setseller extends React.Component {
                 Number(storagedata.data.value.cycleDet[withdrawcycle.toString()].cPrice)) /
               10000;
             if((lrange==urange)&&(key[0]=="-")&&(wprice<lrange)){
+              var negative=true;
               var reward=Number(storagedata.data.value.cycleDet[withdrawcycle.toString()].betDet[key].winnings)/1000000;
               var cAmt=Number(storagedata.data.value.cycleDet[withdrawcycle.toString()].betDet[key].amt)/1000000;
               break;
             }
             if((lrange==urange)&&(key[0]!="-")&&(wprice>=urange)){
+              var negative=false;
               var reward=Number(storagedata.data.value.cycleDet[withdrawcycle.toString()].betDet[key].winnings)/1000000;
               var cAmt=Number(storagedata.data.value.cycleDet[withdrawcycle.toString()].betDet[key].amt)/1000000;
               break;
             }
             if((lrange!=urange)&&(wprice>=lrange)&&(wprice<urange)){
+              var negative=false;
               var reward=Number(storagedata.data.value.cycleDet[withdrawcycle.toString()].betDet[key].winnings)/1000000;
               var cAmt=Number(storagedata.data.value.cycleDet[withdrawcycle.toString()].betDet[key].amt)/1000000;
               break;
@@ -99,7 +102,7 @@ export default class setseller extends React.Component {
               Rannounce:true,
               Tamt:Number(storagedata.data.value.cycleDet[withdrawcycle.toString()].cAmount)/1000000,
               pool:Number(storagedata.data.value.interestPool)/1000000,
-              winning:[lrange,urange,wprice,reward,cAmt]
+              winning:[lrange.toFixed(2),urange.toFixed(2),wprice,reward,cAmt,negative]
             };
           });
 
@@ -453,7 +456,7 @@ export default class setseller extends React.Component {
                     }}
                     >
                       Total Bet Amount<br/>
-                      {this.state.announce?this.state.Tamt?this.state.Tamt.toString()+"XTZ":"0 XTZ":"TBA"}
+                      {this.state.announce?this.state.Tamt?this.state.Tamt.toString()+" XTZ":"0 XTZ":"TBA"}
                     </button>
 
                 </Col>
@@ -486,7 +489,7 @@ export default class setseller extends React.Component {
                     }}
                     >
                     Winners Aggregate ROI{" "}<br/>
-                    {this.state.announce?this.state.Rannounce?this.state.winning[4]?this.state.winning[3]*100/this.state.winning[4]+"%":"0%":"TBA":"TBA"}
+                    {this.state.announce?this.state.Rannounce?this.state.winning[4]?(this.state.winning[3]*100/this.state.winning[4]).toFixed(4)+"%":"0%":"TBA":"TBA"}
                     </button>
 
                 </Col>
@@ -516,7 +519,7 @@ export default class setseller extends React.Component {
                     }}
                     >
                     Total Pool Rewards Won{" "}<br/>
-                    {this.state.announce?this.state.Rannounce?this.state.winning[3]?this.state.winning[3]+"XTZ":"0 XTZ":"TBA":"TBA"}
+                    {this.state.announce?this.state.Rannounce?this.state.winning[3]?this.state.winning[3]+" XTZ":"0 XTZ":"TBA":"TBA"}
                     </button>
 
                 </Col>
@@ -547,7 +550,7 @@ export default class setseller extends React.Component {
                     }}
                     >
                     Total Amount in Winning Range{" "}<br/>
-                    {this.state.announce?this.state.Rannounce?this.state.winning[4]?this.state.winning[4]+"XTZ":"0 XTZ":"TBA":"TBA"}
+                    {this.state.announce?this.state.Rannounce?this.state.winning[4]?this.state.winning[4]+" XTZ":"0 XTZ":"TBA":"TBA"}
                     </button>
 
                 </Col>
