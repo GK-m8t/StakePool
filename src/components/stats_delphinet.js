@@ -413,7 +413,7 @@ export default class setseller extends React.Component {
                         height: "7.05555556vmax",
                         "line-height": "2.55555556vmax",
 
-                    }}this.state.winning[2]
+                    }}
                     >
                       Winning Price Range{" "}<br/>
                       {this.state.announce?this.state.Rannounce?this.state.winning[0] == this.state.winning[1]
