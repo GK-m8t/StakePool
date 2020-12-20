@@ -72,10 +72,10 @@ export default class setseller extends React.Component {
       const tezos = wallet.toTezos();
       const accountPkh = await tezos.wallet.pkh();
       /*const storagedata = await axios.get(
-        "https://api.delphi.tzstats.com/explorer/contract/KT1AkmEKWNKSqK48FTrAF9xUXZ1UdZEPcryk/storage"
+        "https://api.delphi.tzstats.com/explorer/contract/KT1AQd6KeoPyFJdY4baRyR6zCkGZV2r35K1u/storage"
       );*/
       const storagedata = await axios.get(
-        "https://cors-anywhere.herokuapp.com/https://api.delphi.tzstats.com/explorer/contract/KT1AkmEKWNKSqK48FTrAF9xUXZ1UdZEPcryk/storage"
+        "https://cors-anywhere.herokuapp.com/https://api.delphi.tzstats.com/explorer/contract/KT1AQd6KeoPyFJdY4baRyR6zCkGZV2r35K1u/storage"
       );
       var cycle = Math.trunc(storagedata.data.meta.height / 2048);
       var find = JSONPath.nodes(storagedata, "$..bettor");

@@ -164,7 +164,7 @@ export default class setseller extends React.Component {
 
   async fetchContractData() {
     const storagedata = await axios.get(
-      "https://api.better-call.dev/v1/contract/delphinet/KT1AkmEKWNKSqK48FTrAF9xUXZ1UdZEPcryk/storage/rich"
+      "https://api.better-call.dev/v1/contract/delphinet/KT1AQd6KeoPyFJdY4baRyR6zCkGZV2r35K1u/storage/rich"
     );
     const l = storagedata.data.args[0].args[1].args[0].length;
     const mapdata =
@@ -326,7 +326,7 @@ export default class setseller extends React.Component {
           throw new Error("Insufficient Balance in your Account to complete this transaction!");
         }
         const sell = await tezos.wallet.at(
-          "KT1AkmEKWNKSqK48FTrAF9xUXZ1UdZEPcryk"
+          "KT1AQd6KeoPyFJdY4baRyR6zCkGZV2r35K1u"
         );
         const operation = await sell.methods
           .setWager(param1.toString(), param2.toString())

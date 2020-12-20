@@ -37,7 +37,7 @@ export default class setseller extends React.Component {
     this.state = {
       currentCycle: null,
       winning: [],
-      tamt: null,
+      Tamt: null,
       pool:null,
       announce: true,
       Rannounce:true
@@ -54,10 +54,10 @@ export default class setseller extends React.Component {
 
   async stakingStats() {
       /*const storagedata = await axios.get(
-        "https://api.delphi.tzstats.com/explorer/contract/KT1AkmEKWNKSqK48FTrAF9xUXZ1UdZEPcryk/storage"
+        "https://api.delphi.tzstats.com/explorer/contract/KT1AQd6KeoPyFJdY4baRyR6zCkGZV2r35K1u/storage"
       );*/
       const storagedata = await axios.get(
-        "https://cors-anywhere.herokuapp.com/https://api.delphi.tzstats.com/explorer/contract/KT1AkmEKWNKSqK48FTrAF9xUXZ1UdZEPcryk/storage"
+        "https://cors-anywhere.herokuapp.com/https://api.delphi.tzstats.com/explorer/contract/KT1AQd6KeoPyFJdY4baRyR6zCkGZV2r35K1u/storage"
       );
       console.log(storagedata);
       var cycle = Math.trunc(storagedata.data.meta.height / 2048);
@@ -99,7 +99,7 @@ export default class setseller extends React.Component {
               Rannounce:true,
               Tamt:Number(storagedata.data.value.cycleDet[withdrawcycle.toString()].cAmount)/1000000,
               pool:Number(storagedata.data.value.interestPool)/1000000,
-              winning:[lrange,urange,wprice,reward,cAmt,lrange.includes("-")]
+              winning:[lrange,urange,wprice,reward,cAmt]
             };
           });
 
@@ -418,12 +418,12 @@ export default class setseller extends React.Component {
                       Winning Price Range{" "}<br/>
                       {this.state.announce?this.state.Rannounce?this.state.winning[0] == this.state.winning[1]
                         ? this.state.winning[5]
-                          ? "Below $" + this.state.winning[0].toString()
-                          : "Above $" + this.state.winning[0].toString()
+                          ? "Below $" + this.state.winning[0]
+                          : "Above $" + this.state.winning[0]
                         : "Between $" +
-                          this.state.winning[0].toString() +
+                          this.state.winning[0] +
                           " - $" +
-                          this.state.winning[1].toString()
+                          this.state.winning[1]
                       :"TBA":"TBA"}
                     </button>
 
@@ -453,7 +453,7 @@ export default class setseller extends React.Component {
                     }}
                     >
                       Total Bet Amount<br/>
-                      {this.state.announce?this.state.tamt?this.state.tamt.toString()+"XTZ":"0 XTZ":"TBA"}
+                      {this.state.announce?this.state.Tamt?this.state.Tamt.toString()+"XTZ":"0 XTZ":"TBA"}
                     </button>
 
                 </Col>
