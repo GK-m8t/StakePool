@@ -423,6 +423,218 @@ export default class setseller extends React.Component {
   }
 
   render() {
+
+    //console.log(this.state.spranges);
+    let upranges = [];
+    let lowranges = [];
+    for(let i=0;i<this.state.spranges.length;i++)
+    {
+      if(i<4)
+      {
+        upranges.push(this.state.spranges[i]);
+      }
+      else
+      {
+        lowranges.push(this.state.spranges[i]);
+      }
+    }
+
+    
+
+
+    console.log({lowranges});
+    let upperItems = (
+      <div>
+        {upranges.map((value,index)=> {
+          
+          if(index <1)
+          {
+            console.log(index , 'i' , value);
+            return (
+              <div>
+                <Row xs="4">
+                  {upranges.map((value, index)=> (
+                    <Col style={{ "padding-bottom": "1.6666667vmax" }}>
+                      <Card
+                        id={"card" + index.toString()}
+                        style={{
+                          "background-color": "#FFFFFF",
+                          "border-radius": "0.2777777778vmax",
+                        }}
+                      >
+                        <CardImg
+                          src={det}
+                          style={{
+                            width: "5vmax",
+                            height: "4.7222222222vmax",
+                            "padding-top": "1.6666666667vmax",
+                            "padding-left": "1.6666666667vmax",
+                          }}
+                        />
+                        <CardHeader
+                          style={{
+                            "background-color": "#FFFFFF",
+                            "text-align": "left",
+                            "font-family": "OpenSans-Bold, sans-serif",
+                            color: "#183B56",
+                            "font-size": "1.2152777778vmax",
+                            "letter-spacing": "0.0138888889vmax",
+                            "border-radius": "0.2083333333vmax",
+                            "padding-left": "1.6666666667vmax",
+                          }}
+                        >
+                          <strong>
+                            Price Prediction
+                            <br />
+                            {value[2] == value[3]
+                              ? value[2] > 0
+                                ? "Above $" + value[0].toString()
+                                : "Below $" + value[0].toString()
+                              : "Between $" +
+                                value[0].toString() +
+                                " - $" +
+                                value[1].toString()}
+                          </strong>
+                          <img
+                            align="right"
+                            src={value[2] < 0 ? down : up}
+                            style={{
+                              width: "1.2222222222vmax",
+                              height: "2.5vmax",
+                              "padding-right": "0.121vmax",
+                              "padding-bottom": "0.5777777778vmax",
+                            }}
+                          />
+                        </CardHeader>
+                      </Card>
+                      <UncontrolledPopover
+                        placement="bottom-start"
+                        hideArrow={true}
+                        trigger="legacy"
+                        flip={false}
+                        target={"card" + index.toString()}
+                        container={"card" + index.toString()}
+                      >
+                        <PopoverHeader
+                          style={{
+                            "text-align": "center",
+                            "font-size": "1.2152777778vmax",
+                          }}
+                        >
+                          The Predicted Price is
+                          <br />
+                          {value[2] == value[3]
+                            ? value[2] > 0
+                              ? "Above $" + value[0].toString()
+                              : "Below $" + value[0].toString()
+                            : "Between $" +
+                              value[0].toString() +
+                              " - $" +
+                              value[1].toString()}
+                        </PopoverHeader>
+                        <PopoverBody>
+                          <ul
+                            style={{
+                              "padding-left": "0.6333333333vmax",
+                              color: "#748093",
+                              "font-size": "0.9652778vmax",
+                            }}
+                          >
+                            <li
+                              style={{ "padding-bottom": "1vmax" }}
+                              style={{ "padding-bottom": "1vmax" }}
+                            >
+                              The Expected ROI currently for your inputted staking amount
+                              is{" "}
+                              {this.state.tamt == value[4]
+                                ? this.state.roi
+                                : this.state.amount !== null
+                                ? Math.round(
+                                    (10000 *
+                                      (100 - 2) *
+                                      this.state.roi *
+                                      (this.state.tamt +
+                                        this.state.amount * 1000000)) /
+                                      (100 *
+                                        (value[4] +
+                                          this.state.amount * 1000000))
+                                  ) / 10000
+                                : Math.round(
+                                    (10000 *
+                                      (100 - 2) *
+                                      this.state.roi *
+                                      (this.state.tamt + 1 * 1000000)) /
+                                      (100 * (value[4] + 1 * 1000000))
+                                  ) / 10000}
+                              %.
+                            </li>
+                            <li style={{ "padding-bottom": "1vmax" }}>
+                              The staking rewards is calculated for the cycles{" "}
+                              {this.state.currentCycle + 1}-
+                              {this.state.endCycle}.
+                            </li>
+                            <li style={{ "padding-bottom": "1vmax" }}>
+                              A fee of 2% inclusive on your winning returns is
+                              taken for the usage of the platform.
+                            </li>
+                            <li style={{ "padding-bottom": "1vmax" }}>
+                              If, at the completion of your staking period on{" "}
+                              {new Date(
+                                this.state.cycletime + this.state.duration
+                              ).toDateString()}
+                              ,the price of XTZ is in this range, then you get
+                              back your returns along with your staking
+                              investment.Else you would lose your staking
+                              returns and only get back your staking investment.{" "}
+                            </li>
+                            <li style={{ "padding-bottom": "1vmax" }}>
+                              You shall get back your staked amount (plus the
+                              winning rewards if applicable) at the conclusion
+                              of cycle {this.state.endCycle - 1} on{" "}
+                              {new Date(
+                                this.state.cycletime + this.state.duration
+                              ).toDateString()}
+                              .
+                            </li>
+                          </ul>
+                          <div align="center">
+                            <button
+                              onClick={() => {
+                                this.select(index);
+                              }}
+                              style={{
+                                "font-family": "OpenSans-Bold, sans-serif",
+                                color: "#1565D8",
+                                backgroundColor: "#FFFFFF",
+                                "text-align": "center",
+                                "font-size": "1.277778vmax",
+                                border: "0.06944vmax solid #1565D8",
+                                "border-radius": "0.556vmax",
+                                width: "9.4444444vmax",
+                                height: "2.5555555vmax",
+                                padding: "0.13889vmax 0.13889vmax ",
+                              }}
+                            >
+                              Select
+                            </button>
+                          </div>
+                        </PopoverBody>
+                      </UncontrolledPopover>
+                    </Col>
+                  ))}
+                </Row>
+              </div>
+            )
+          }
+          else
+          {
+            return null;
+          }
+        })}
+      </div>
+    )
+
+
     return (
       <Container
         fluid="xs"
@@ -467,6 +679,7 @@ export default class setseller extends React.Component {
                 <NavLink
                   href="https://www.notion.so/Stakepool-A-no-loss-price-prediction-experiment-38bc2c0e0fe540aaaa1bc91ebcdcf5c4"
                   target="_blank" rel="noopener noreferrer"
+
                   style={{
                     "font-size": "1.1111111111vmax",
                     "font-family": "OpenSans-SemiBold, sans-serif",
@@ -1076,11 +1289,18 @@ export default class setseller extends React.Component {
             You can search for more details by clicking on the respective
             category below.
           </p>
+
+          
+            {upperItems}
+          
+            
+
+
           <Collapse isOpen={this.state.option || this.state.help}>
             {this.state.option || this.state.help ? (
               this.state.option ? (
                 <Row xs="4">
-                  {this.state.spranges.map((value, index) => (
+                  {lowranges.map((value, index) => (
                     <Col style={{ "padding-bottom": "1.6666667vmax" }}>
                       <Card
                         id={"card" + index.toString()}
