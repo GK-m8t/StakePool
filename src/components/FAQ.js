@@ -145,7 +145,7 @@ export default class setseller extends React.Component {
                 >
                   <DropdownItem style={{ "line-height": "0.6667vmax" }}>
                     <NavLink
-                      href="mainnet"
+                      href="/mainnet"
                       style={{
                         "font-size": "1.1111111111vmax",
                         "font-family": "OpenSans-SemiBold, sans-serif",
@@ -242,8 +242,7 @@ export default class setseller extends React.Component {
                   <DropdownItem header>Stakepool</DropdownItem>
                   <DropdownItem style={{ "line-height": "0.6667vmax" }}>
                     <NavLink
-                    disabled
-                      href="/"
+                      href="/mainnet"
                       style={{
                         "font-size": "1.1111111111vmax",
                         "font-family": "OpenSans-SemiBold, sans-serif",
@@ -363,7 +362,8 @@ export default class setseller extends React.Component {
             "padding-right": 20,
             }}
         >
-        Connect your Thanos wallet with stakepool and utilize your instincts to stake on a range 
+        Connect your <a href="https://thanoswallet.com/download" target="_blank" rel="noopener noreferrer">Thanos wallet </a>
+        with stakepool and utilize your instincts to stake on a range 
         which you think XTZ will reach in the designated cycle.
         </p>
 
@@ -452,7 +452,8 @@ export default class setseller extends React.Component {
             "padding-right": 20,
             }}
         >
-        You can connect your Thanos wallet with our Dapp and start betting on the ranges you think 
+        You can connect your <a href="https://thanoswallet.com/download" target="_blank" rel="noopener noreferrer">Thanos wallet </a>
+         with our Dapp and start betting on the ranges you think 
         where the XTZ amount will lay after particular cycles.
         </p>
 

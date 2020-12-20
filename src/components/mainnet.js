@@ -145,7 +145,7 @@ export default class setseller extends React.Component {
                 >
                   <DropdownItem style={{ "line-height": "0.6667vmax" }}>
                     <NavLink
-                      href="mainnet"
+                      href="/mainnet"
                       style={{
                         "font-size": "1.1111111111vmax",
                         "font-family": "OpenSans-SemiBold, sans-serif",
