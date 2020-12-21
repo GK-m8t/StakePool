@@ -59,7 +59,6 @@ export default class setseller extends React.Component {
       const storagedata = await axios.get(
         "https://cors-anywhere.herokuapp.com/https://api.delphi.tzstats.com/explorer/contract/KT1AQd6KeoPyFJdY4baRyR6zCkGZV2r35K1u/storage"
       );
-      console.log(storagedata);
       var cycle = Math.trunc(storagedata.data.meta.height / 2048);
       if(storagedata.data.value.withdrawcycle!="1"){
         if(Number(storagedata.data.value.withdrawcycle)>6){

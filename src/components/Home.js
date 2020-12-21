@@ -146,7 +146,6 @@ export default class setseller extends React.Component {
     /*const tzresponse = await axios.get(
       "https://api.delphi.tzstats.com/explorer/cycle/head/"
     );*/
-    console.log(JSON.stringify(tzresponse));
     const ctime = new Date(tzresponse.data.end_time).valueOf();
     const stime = new Date(tzresponse.data.start_time).valueOf();
     const cycle = tzresponse.data.cycle;
@@ -424,7 +423,6 @@ export default class setseller extends React.Component {
 
   render() {
 
-    //console.log(this.state.spranges);
     let upranges = [];
     let lowranges = [];
     for(let i=0;i<this.state.spranges.length;i++)
@@ -439,17 +437,12 @@ export default class setseller extends React.Component {
       }
     }
 
-    
-
-
-    console.log({lowranges});
     let upperItems = (
       <div>
         {upranges.map((value,index)=> {
           
           if(index <1)
           {
-            console.log(index , 'i' , value);
             return (
               <div>
                 <Row xs="4">
@@ -1289,13 +1282,9 @@ export default class setseller extends React.Component {
             You can search for more details by clicking on the respective
             category below.
           </p>
-
           
             {upperItems}
           
-            
-
-
           <Collapse isOpen={this.state.option || this.state.help}>
             {this.state.option || this.state.help ? (
               this.state.option ? (
